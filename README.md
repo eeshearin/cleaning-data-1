@@ -13,12 +13,21 @@ In accordance with the project, I have created one R script called run_analysis.
 ## Steps to reproduce the code
 
 1. Download the data source (link below) and put the downloaded compressed file into a folder on your local drive. Uncompress the file and you'll have a ```UCI HAR Dataset``` folder.
-2. Put ```run_analysis.R``` in the parent folder of ```UCI HAR Dataset```, then set the parent folder as your working directory using the ```setwd()``` function in RStudio or R.
+2. Put ```run_analysis.R``` in the folder  ```UCI HAR Dataset```, then set the folder as your working directory using the ```setwd()``` function in RStudio or R.
 3. Run ```source("run_analysis.R")```, which will generate a new file ```tidydata.txt``` in your working directory.
 
 ## Dependencies
 
-The ```run_analysis.R``` file will install the dependencies automatically. The script then may not work if you do not have an active internet connection. The script depends on the packages ```dplyr``` and ```data.table```. 
+The ```run_analysis.R``` file will install the dependencies automatically. The script then may not work if you do not have an active internet connection. The script depends on the packages ```dplyr``` and ```data.table```. The script assumes it has in its working directory the following files and folders:
+- activity_labels.txt
+- features.txt
+- test/
+- train/
 
 ## Data source
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+## Files in this repo:
+- README.md: describes the steps taken, goals, and how to reproduce the project
+- CodeBook.md: describes the data gathering methods, old data, transformation process, and defines the variables
+- run_analysis.R: provides the actual code
